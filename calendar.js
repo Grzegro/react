@@ -66,7 +66,6 @@ const Calendar = ({ lists }) => {
 
   //zapisywanie zmienej na podstawie wybranego przez użytkownika dnia
   const handleDayClick = (day) => {
-    console.log(day);
     setSelectedDate(day);
   };
 
@@ -120,7 +119,6 @@ const Calendar = ({ lists }) => {
 
   // zamknięcie okna z informacjami czy w wybranym przez użytkownika dniu są zaplanowane zadania
   const closeModal = () => {
-    console.log("wrfawrtwae");
     setSelectedDate(null);
   };
 
@@ -129,7 +127,7 @@ const Calendar = ({ lists }) => {
   const Modal = ({ date }) => {
     
     const filteredElements = filterElements(date);
-    console.log(filterElements);
+  
     const day = date.date.getDate();
     const month = date.date.toLocaleString('default', { month: 'long' });
     const year = date.date.getFullYear();
